@@ -139,7 +139,7 @@ where salary = (select distinct salary from worker ORDER BY salary desc limit 1 
 -- Q-35. Write an SQL query to fetch the list of employees with the same salary.
 
 -- @block
-select * from worker w1 , worker w2 
+select distinct w1.* from worker w1 , worker w2 
 where w1.salary = w2.salary and not w1.worker_id = w2.worker_id;
 
 -- Q-36. Write an SQL query to show the second highest salary from a table using sub-query.
